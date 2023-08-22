@@ -1,0 +1,40 @@
+/* general */
+.banner {
+  display: flex;
+
+  gap: 1rem;
+  padding: 1rem;
+  align-items: flex-start;
+  border-radius: 0.375rem;
+}
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  margin-top: 0.1rem;
+}
+
+.banner h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* banner status styles */
+.success {
+  background: #ecfdf5;
+  color: #047857;
+}
+.error {
+  background: #fef2f2;
+  color: #92400e;
+}
+.warning {
+  background: #fef2f2;
+  color: #b45309;
+}
+.neutral {
+  background: #eef8ff;
+  color: #1c51b9;
+}

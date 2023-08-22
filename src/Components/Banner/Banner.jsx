@@ -27,21 +27,23 @@ function getIcon(status) {
   }
 }
 
-function Banner({ status, title = 'add title prop', text = 'add text prop' }) {
+function Banner({ status, title = 'add title prop', text }) {
   checkStatus(status);
 
   let icon = getIcon(status);
 
   return (
-    <div className="banner">
-      <div>
-        <img className="icon" src={icon} alt="icon" />
+    <>
+      <div className={`banner ${status}`}>
+        <div>
+          <img className="icon" src={icon} alt="icon" />
+        </div>
+        <div>
+          <h4>{title}</h4>
+          {text && <p>{text}</p>}
+        </div>
       </div>
-      <div>
-        <h4>{title}</h4>
-        <p>{text}</p>
-      </div>
-    </div>
+    </>
   );
 }
 
