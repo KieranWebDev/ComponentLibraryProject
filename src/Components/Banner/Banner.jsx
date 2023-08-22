@@ -1,7 +1,7 @@
 // import './Banner.css';
 
-// function Banner({ status, title, text }) {
-//   return <div></div>;
-// }
+function Banner({ status, title, text }) {
+  return <div></div>;
+}
 
-// export default Banner;
+export default Banner;
