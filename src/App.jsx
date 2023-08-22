@@ -7,7 +7,7 @@ function App() {
     <>
       <h1>Component Library</h1>
       <Badges />
-      <Banner status="" title="lorem" text="lorem ipsum "></Banner>
+      <Banner status="neutral"></Banner>
     </>
   );
 }
