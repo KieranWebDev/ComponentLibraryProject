@@ -17,11 +17,12 @@ function Badge({ color = 'blue', badgeType = 'square', children }) {
     badgeColor = 'blue';
   }
 
-  let badgeClasses = ` badge ${borderRadius} ${badgeColor}  `;
+  let badgeClasses = `badge ${borderRadius} ${badgeColor}`;
+  console.log(badgeClasses);
 
   return (
     <div className={badgeClasses}>
-      <h3>{children}</h3>
+      <span>{children}</span>
     </div>
   );
 }
