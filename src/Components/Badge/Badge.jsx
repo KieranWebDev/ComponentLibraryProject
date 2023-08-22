@@ -1,28 +1,32 @@
 import './Badge.css';
 
-function Badge({ color = 'blue', badgeType = 'square', children, ...rest }) {
-  console.log(color);
-  let borderRadius = badgeType === 'pill' ? 'pill' : 'square';
+function getBorderRadius(badgeType) {
+  return badgeType === 'pill' ? 'pill' : 'square';
+}
+function getBadgeColor(color) {
+  const colors = [
+    'gray',
+    'red',
+    'yellow',
+    'green',
+    'blue',
+    'indigo',
+    'purple',
+    'pink',
+  ];
 
-  let badgeColor = '';
-
-  if (
-    color === 'gray' ||
-    color === 'red' ||
-    color === 'yellow' ||
-    color === 'green' ||
-    color === 'blue' ||
-    color === 'indigo' ||
-    color === 'purple' ||
-    color === 'pink'
-  ) {
-    badgeColor = color;
+  if (colors.includes(color)) {
+    return color;
   } else {
-    badgeColor = 'blue';
+    throw new Error(`Invalid color: ${color}`);
   }
+}
+
+function Badge({ color, badgeType = 'square', children, ...rest }) {
+  let borderRadius = getBorderRadius(badgeType);
+  let badgeColor = getBadgeColor(color);
 
   let badgeClasses = `badge ${borderRadius} ${badgeColor}`;
-  console.log(badgeClasses);
 
   return (
     <div className={badgeClasses} {...rest}>
