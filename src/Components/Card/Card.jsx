@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMugSaucer } from '@fortawesome/free-solid-svg-icons';
 
+// css
+import './Card.css';
+
 function Card({
   icon = <FontAwesomeIcon icon={faMugSaucer} />,
   title = 'insert title',
